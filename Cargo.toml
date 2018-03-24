@@ -1,0 +1,10 @@
+[package]
+name = "js_r_client"
+version = "0.1.0"
+authors = ["khaibui"]
+
+[dependencies]
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
