@@ -3,9 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Rust with WebAssembly</title>
+    <style media="screen">
+      .wrapper {
+        display: flex;
+        margin: 20px auto;
+        width: 500px;
+        justify-content: space-between;
+      }
+    </style>
   </head>
   <body>
-    Hello people!!
+    <div class="wrapper">
+      <div class="left">
+        <button type="button" name="button">42 Fibonacci with JS</button>
+        <div class="js-output">
+        </div>
+      </div>
+      <div class="right">
+        <button type="button" name="button">42 Fibonacci with Rust</button>
+        <div class="rust_output">
+        </div>
+      </div>
+    </div>
     <script src='/bundle.js'></script>
   </body>
 </html>
