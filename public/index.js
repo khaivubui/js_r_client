@@ -7,3 +7,20 @@ const loadRustFibonacci = async () => {
 };
 
 loadRustFibonacci();
+
+const jsFibBtn = document.getElementById('js-fib-btn');
+const rustFibBtn = document.getElementById('rust-fib-btn');
+const jsOutput = document.getElementById('js-output');
+const rustOutput = document.getElementById('rust-output');
+
+jsFibBtn.addEventListener('click', () => {
+  const div = document.createElement('div');
+  div.append('lol');
+  jsOutput.append(div);
+});
+
+rustFibBtn.addEventListener('click', () => {
+  const div = document.createElement('div');
+  div.append('lol');
+  rustOutput.append(div);
+});
