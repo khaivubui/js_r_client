@@ -1,17 +1,17 @@
+// JavaScript Fibonacci function
 const jsNthFibonacci = (num) => {
   if (num < 2) return num;
   return jsNthFibonacci(num - 1) + jsNthFibonacci(num - 2);
 };
 
+// Rust Fibonacci function
 let rustNthFibonacci;
-
-const loadRustFibonacci = async () => {
+(async () => {
   const rustWASM = await WebAssembly.instantiateStreaming(fetch('js_r_client.wasm'), {});
   rustNthFibonacci = rustWASM.instance.exports.nth_fibonacci;
-};
+})();
 
-loadRustFibonacci();
-
+// DOM stuff
 const jsFibBtn = document.getElementById('js-fib-btn');
 const rustFibBtn = document.getElementById('rust-fib-btn');
 const jsOutput = document.getElementById('js-output');
