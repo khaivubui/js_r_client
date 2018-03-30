@@ -1,6 +1,6 @@
 // JavaScript Fibonacci function
 const jsNthFibonacci = (num) => {
-  if (num < 2) return num;
+  if (num < 2) return 1;
   return jsNthFibonacci(num - 1) + jsNthFibonacci(num - 2);
 };
 
@@ -20,7 +20,7 @@ const rustOutput = document.getElementById('rust-output');
 jsFibBtn.addEventListener('click', () => {
   const startTime = new Date();
 
-  let num = 1;
+  let num = 0;
   while (num <= 42) {
     const div = document.createElement('div');
     div.append(jsNthFibonacci(num));
@@ -36,7 +36,7 @@ jsFibBtn.addEventListener('click', () => {
 rustFibBtn.addEventListener('click', () => {
   const startTime = new Date();
 
-  let num = 1;
+  let num = 0;
   while (num <= 42) {
     const div = document.createElement('div');
     div.append(rustNthFibonacci(num));
